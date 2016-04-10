@@ -33,7 +33,7 @@ include('functions.php');
           <select name="genre" class="genreDrop">
               <option value="all"> All </option>
               <?php
-                 $genres = getGenere();
+                 $genres = getGenre();
                  foreach ($genres as $genre) {
                    echo "<option value='".$genre['genre']."'>" . $genre['genre'] . " </option>";
                  }
@@ -48,14 +48,14 @@ include('functions.php');
               <?php
                  $albums = getAlbum();
                  foreach ($albums as $album) {
-                   echo "<option value='".$album['title']."'>" . $album['title'] . " </option>";
+                   echo "<option value='".$album['albulmName']."'>" . $album['albulmName'] . " </option>";
                  }
                 
                ?>
               
           </select>
           Max. Price:
-          <input type="text" name="maxPrice" size=5>
+          <input type="text" name="maxPrice" size=5> <br>
           
           Order results by: 
           <input type="radio" name="orderBy" value="artist" checked> Artist 

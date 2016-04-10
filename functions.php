@@ -8,7 +8,7 @@ function getByArtist() {
     global $dbConnection;
     
     $sql = "SELECT *
-            FROM songs NATURAL JOIN artist NATURAL JOIN album
+            FROM songs NATURAL JOIN artist NATURAL JOIN albulm
             WHERE artist = :artist";
     $namedStuff = array();
     $namedStuff[':artist'] = $_POST['artist'];
@@ -24,8 +24,8 @@ function getByAlbum() {
     global $dbConnection;
     
     $sql = "SELECT *
-            FROM songs NATURAL JOIN artist NATURAL JOIN album
-            WHERE album = :album";
+            FROM songs NATURAL JOIN artist NATURAL JOIN albulm
+            WHERE albulm = :album";
     $namedStuff = array();
     $namedStuff[':album'] = $_POST['album'];
     $statement = $dbConnection->prepare($sql);
@@ -40,7 +40,7 @@ function getByGenre() {
     global $dbConnection;
     
     $sql = "SELECT *
-            FROM songs NATURAL JOIN artist NATURAL JOIN album
+            FROM songs NATURAL JOIN artist NATURAL JOIN albulm
             WHERE genre = :genre";
     $namedStuff = array();
     $namedStuff[':genre'] = $_POST['genre'];
@@ -55,7 +55,7 @@ function getByGenre() {
 function getArtists() {
     global $dbConnection;
     
-    $sql = "SELECT artistName fom artist";
+    $sql = "SELECT artistName from artist";
     $namedStuff = array();
     $statement = $dbConnection->prepare($sql);
     $statement->execute();
@@ -68,7 +68,7 @@ function getArtists() {
 function getGenre() {
     global $dbConnection;
     
-    $sql = "SELECT genre fom album";
+    $sql = "SELECT genre from albulm";
     $namedStuff = array();
     $statement = $dbConnection->prepare($sql);
     $statement->execute();
@@ -81,7 +81,7 @@ function getGenre() {
 function getAlbum() {
     global $dbConnection;
     
-    $sql = "SELECT title fom album";
+    $sql = "SELECT albulmName from albulm";
     $namedStuff = array();
     $statement = $dbConnection->prepare($sql);
     $statement->execute();
@@ -96,10 +96,10 @@ function getProductList()
 
 global $dbConnection;
     $sql = "SELECT artistName,
-            albumName, title, price
+            albulmName, title, price
             FROM songs NATURAL JOIN
             artist NATURAL JOIN
-            ALBUM WHERE 1";
+            albulm WHERE 1";
             
     if (isset($_GET['searchForm'])) { //checks whether the search form was submitted
         
@@ -127,7 +127,7 @@ global $dbConnection;
             //Following line DOESN'T prevent SQL INJECTION
             //$sql .= " AND productTypeId = " . $_GET['productType'];
             
-            $sql .= " AND albumName = :albumName"; //Using Named Parameters to prevent SQL Injection
+            $sql .= " AND albulmName = :albumName"; //Using Named Parameters to prevent SQL Injection
             $namedParameters[":albumName"] =  $_GET['album'];
         }
         
