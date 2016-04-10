@@ -52,6 +52,48 @@ function getByGenre() {
     
 }
 
+function getArtists() {
+    global $dbConnection;
+    
+    $sql = "SELECT artistName fom artist";
+    $namedStuff = array();
+    $statement = $dbConnection->prepare($sql);
+    $statement->execute();
+    $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $records;
+    
+}
+
+function getGenre() {
+    global $dbConnection;
+    
+    $sql = "SELECT genre fom album";
+    $namedStuff = array();
+    $statement = $dbConnection->prepare($sql);
+    $statement->execute();
+    $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $records;
+    
+}
+
+function getAlbum() {
+    global $dbConnection;
+    
+    $sql = "SELECT title fom album";
+    $namedStuff = array();
+    $statement = $dbConnection->prepare($sql);
+    $statement->execute();
+    $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+    
+    return $records;
+    
+}
+
+
+
+
 
 
 ?>
