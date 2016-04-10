@@ -8,6 +8,7 @@ include('functions.php');
 <html>
     <head>
         <title> CD STORE </title>
+        <style>@import url('CD_store.css');</style>
     </head>
     <body>
         <h1>CD STORE</h1>
