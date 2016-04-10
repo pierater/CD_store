@@ -79,7 +79,13 @@ include('functions.php');
           <?php
           
            $productList = getProductList();
-
+            foreach($productList as $product)
+            {
+                echo "<tr>";
+                echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['albulmName']  . "' id= '". $product['artistName'] . "'>" . $product['artistName']
+                . "</td> ";
+                echo "</tr>";
+            }
           
           ?>
           
