@@ -16,7 +16,7 @@ include('functions.php');
         <form class="filterForm">
             
           Artist:
-          <select name="artist">
+          <select name="artist" class="artistDrop">
               <option value="all"> All </option>
               <?php
                  $artists = getArtists();
@@ -29,7 +29,7 @@ include('functions.php');
           </select>
           
           Genre:
-          <select name="genre">
+          <select name="genre" class="genreDrop">
               <option value="all"> All </option>
               <?php
                  $genres = getGenere();
@@ -42,7 +42,7 @@ include('functions.php');
           </select>
           
           Album:
-          <select name="album">
+          <select name="album" class="albumDrop">
               <option value="all"> All </option>
               <?php
                  $albums = getAlbum();
