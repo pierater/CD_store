@@ -54,8 +54,38 @@ include('functions.php');
                ?>
               
           </select>
+          Max. Price:
+          <input type="text" name="maxPrice" size=5>
+          
+          Order results by: 
+          <input type="radio" name="orderBy" value="artist" checked> Artist 
+          <input type="radio" name="orderBy" value="album"> Album
+          <input type="radio" name="orderBy" value="price" checked> Price
+          <input type="radio" name="orderBy" value="title"> Title
+          
+          <input type="submit" value="Search Products" name="searchForm">
             
         </form>
+        
+        <div class='table'>
+      <table border=1>
+          
+          <tr>
+              <th> Artist Name </th>
+              <th> Album Name </th>
+              <th> Song Title </th>
+              <th> Album Price </th>
+          </tr>
+          <?php
+          
+           $productList = getProductList();
+
+          
+          ?>
+          
+      </table>
+        
+        
 
     </body>
 </html>
