@@ -84,6 +84,9 @@ include('functions.php');
                 echo "<tr>";
                 echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['albulmName']  . "' id= '". $product['artistName'] . "'>" . $product['artistName']
                 . "</td> ";
+                echo "<td> '" . $product['albulmName'] . "' </td>";
+                echo "<td> '" . $product['title'] . "' </td>";
+                echo "<td> $" . $product['price'] . " </td>";
                 echo "</tr>";
             }
           
