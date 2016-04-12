@@ -95,7 +95,10 @@ include('functions.php');
           ?>
           
       </table>
-      </ div>
+      
+      <form>
+          <input type="submit" value="BUY NOW" name="buy">
+      </form>
         <iframe name="productInfoiFrame" width="250" height="315" 
           src="getProductInfo.php" frameborder="0" style='float: right'></iframe>
         
