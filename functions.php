@@ -148,7 +148,7 @@ global $dbConnection;
             
         }
         
-        echo $sql;
+        //echo $sql;
 
     }    
           
