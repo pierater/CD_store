@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('functions.php');
+include('../../includes/database.php');
 function getProducts()
 {
     $productsToBuy = $_GET['album'];
