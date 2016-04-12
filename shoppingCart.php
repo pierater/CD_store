@@ -1,16 +1,14 @@
 <?php
 session_start();
 include('functions.php');
-include('../../includes/database.php');
+//include('../../includes/database.php');
 function getProducts()
 {
-    $productsToBuy = $_GET['album'];
-   //$productList = getProductList();
+    $productsToBuy = array_unique($_GET['album']);
     $total = 0;
-    
     foreach($productsToBuy as $product){
-            echo $product . "   "  . "$". getPrice($product); 
-            $total+=getPrice($product);
+            echo $product . "   "  . "$". getPrice($product)[0]['price']; 
+            $total+=getPrice($product)[0]['price'];
             echo "<br />";
             
         }
@@ -20,7 +18,7 @@ function getPrice($album)
 {
     global $dbConnection;
     
-    $sql = "SELECT price from albulm WHERE albulmName = " . $album . ";";
+    $sql = "SELECT price from albulm WHERE albulmName = '" . $album . "'";
     $statement = $dbConnection->prepare($sql);
     $statement->execute();
     $records = $statement->fetchAll(PDO::FETCH_ASSOC);
