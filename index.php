@@ -60,8 +60,8 @@ include('functions.php');
           <input type="text" name="maxPrice" size=5> <br>
           
           Order results by: 
-          <input type="radio" name="orderBy" value="artist" checked> Artist 
-          <input type="radio" name="orderBy" value="album"> Album
+          <input type="radio" name="orderBy" value="artistName" checked> Artist 
+          <input type="radio" name="orderBy" value="albulmName"> Album
           <input type="radio" name="orderBy" value="price" checked> Price
           <input type="radio" name="orderBy" value="title"> Title
           
