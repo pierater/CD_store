@@ -22,9 +22,12 @@ function getProducts()
             //echo "<br />";
             
         }
+        echo "<td colspan='2'>";
+        echo "Total $". $total ;
+        echo "</td>";
         echo "</table>";
         echo "</div>";
-    echo "Total $". $total ;
+   // echo "Total $". $total ;
 }
 function getPrice($album)
 {
@@ -55,7 +58,7 @@ function getPrice($album)
         
         <br />
         <div id = "thankyou" >
-        You ordered the following products:
+       <h3 id="slogan"> You ordered the following products:</h3>
         </div>
         <br />
         
