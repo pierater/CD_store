@@ -43,8 +43,8 @@ function getPrice($album)
     <body>
         <h1>Thank you for shopping at CD STORE</h1>
         <br />
-        You ordered the following products:
-        
+        You ordered the following products: <br />
+        <?=getProducts()?>
 
     </body>
 </html>
