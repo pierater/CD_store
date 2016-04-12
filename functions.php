@@ -149,7 +149,11 @@ global $dbConnection;
 
     }    
           
-    // echo $sql;            
+    //echo $sql;
+    //$sql = "SELECT * FROM songs NATURAL JOIN
+            //artist NATURAL JOIN
+            //albulm WHERE 1";
+    //print_r($namedParameters);
     $statement = $dbConnection->prepare($sql);
     $statement->execute($namedParameters);
     $records = $statement->fetchAll(PDO::FETCH_ASSOC);
@@ -157,6 +161,19 @@ global $dbConnection;
     //print_r($records);
     
     return $records;    
+}
+
+
+function getProductInfo() {
+   global $dbConnection;
+   $sql = "SELECT description FROM songs WHERE title = :title";
+   $namedParameters = array(":title"=>$_GET['Id']);
+   $statement =  $dbConnection->prepare($sql);
+   $statement->execute($namedParameters);
+   //$product = $statement->fetch(PDO::FETCH_ASSOC);
+   //return $product;
+   return $statement->fetch(PDO::FETCH_ASSOC);
+    
 }
 
 

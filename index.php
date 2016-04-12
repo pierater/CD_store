@@ -84,7 +84,7 @@ include('functions.php');
                 echo "<tr>";
                 echo "<td> '" . $product['artistName'] . "' </td>";
                 echo "<td> '" . $product['albulmName'] . "' </td>";
-                echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['albulmName']  . "' id= '". $product['title'] . "'>" . "<a target='productInfoiFrame' href='getProductInfo.php?Id=" . $product['description'] . "'>" . $product['title'] . "</a>" 
+                echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['title']  . "' id= '". "frame" . "'>" . "<a target='productInfoiFrame' href='getProductInfo.php?Id=" . $product['title'] . "'>" . $product['title'] . "</a>" 
                 . "</td> ";
                 echo "<td> $" . $product['price'] . " </td>";
                 echo "</tr>";
