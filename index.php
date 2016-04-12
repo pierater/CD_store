@@ -100,6 +100,7 @@ include('functions.php');
       </table>
           <input type="submit" value="BUY NOW" name="buy">
       </form>
+      </div>
       <div id = "iframe">
           <table border = 1>
               <tr>
@@ -107,21 +108,12 @@ include('functions.php');
               </tr>
               <tr>
               <td>
-            <iframe name="productInfoiFrame" width="250" height="315" 
+            <iframe name="productInfoiFrame" width="250" height="100" 
             src="getProductInfo.php" frameborder="0" style='float: right'></iframe>
             </td>
             </tr>
             </table>
       </div>
-        
-        <iframe name="productInfoiFrame" width="250" height="100" 
-          src="getProductInfo.php" frameborder="0" style='float: right'>
-        </iframe>
-              </td>
-              </tr>
-          </table>
-        </div>
->>>>>>> a45e480d85919835551e7bf55b5ff6deb274f3d9
 
     </body>
 </html>
