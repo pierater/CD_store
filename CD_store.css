@@ -77,3 +77,21 @@ border-bottom-left-radius: 2em;
 border-bottom-right-radius: 2em;
 
  }
+ 
+ #iframe{
+     text-align:center;
+     width:14%; 
+margin-left:43%; 
+margin-right:35%;
+     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+50,cec7ec+51,c1bfea+100;Purple+3D+%231 */
+background: rgb(235,233,249); /* Old browsers */
+background: -moz-linear-gradient(top,  rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(235,233,249,1) 0%,rgba(216,208,239,1) 50%,rgba(206,199,236,1) 51%,rgba(193,191,234,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(235,233,249,1) 0%,rgba(216,208,239,1) 50%,rgba(206,199,236,1) 51%,rgba(193,191,234,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebe9f9', endColorstr='#c1bfea',GradientType=0 ); /* IE6-9 */
+border-top-left-radius: 2em;
+border-top-right-radius: 2em;
+border-bottom-left-radius: 2em;
+border-bottom-right-radius: 2em;
+    
+ }
