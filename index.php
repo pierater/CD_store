@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include('functions.php');
 
 ?>
@@ -96,7 +96,7 @@ include('functions.php');
           
       </table>
       
-      <form>
+      <form action="shoppingCart.php">
           <input type="submit" value="BUY NOW" name="buy">
       </form>
         <iframe name="productInfoiFrame" width="250" height="315" 
