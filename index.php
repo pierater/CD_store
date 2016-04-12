@@ -18,7 +18,7 @@ include('functions.php');
             
           Artist:
           <select name="artist" class="artistDrop">
-              <option value="all"> All </option>
+              <option value=""> All </option>
               <?php
                  $artists = getArtists();
                  foreach ($artists as $artist) {
@@ -31,7 +31,7 @@ include('functions.php');
           
           Genre:
           <select name="genre" class="genreDrop">
-              <option value="all"> All </option>
+              <option value=""> All </option>
               <?php
                  $genres = getGenre();
                  foreach ($genres as $genre) {
@@ -44,7 +44,7 @@ include('functions.php');
           
           Album:
           <select name="album" class="albumDrop">
-              <option value="all"> All </option>
+              <option value=""> All </option>
               <?php
                  $albums = getAlbum();
                  foreach ($albums as $album) {
@@ -82,10 +82,10 @@ include('functions.php');
             foreach($productList as $product)
             {
                 echo "<tr>";
-                echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['albulmName']  . "' id= '". $product['artistName'] . "'>" . $product['artistName']
-                . "</td> ";
+                echo "<td> '" . $product['artistName'] . "' </td>";
                 echo "<td> '" . $product['albulmName'] . "' </td>";
-                echo "<td> '" . $product['title'] . "' </td>";
+                echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['albulmName']  . "' id= '". $product['title'] . "'>" . "<a target='productInfoiFrame' href='getProductInfo.php?Id=" . $product['description'] . "'>" . $product['title'] . "</a>" 
+                . "</td> ";
                 echo "<td> $" . $product['price'] . " </td>";
                 echo "</tr>";
             }
@@ -93,7 +93,8 @@ include('functions.php');
           ?>
           
       </table>
-        
+        <iframe name="productInfoiFrame" width="250" height="315" 
+          src="getProductInfo.php" frameborder="0" style='float: right'></iframe>
         
 
     </body>
