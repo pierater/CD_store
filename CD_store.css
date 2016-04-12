@@ -79,10 +79,9 @@ border-bottom-right-radius: 2em;
  }
  
  #iframe{
-     text-align:center;
-     width:14%; 
-margin-left:43%; 
-margin-right:35%;
+     width:21%; 
+    margin: 0 auto;
+    text-align:center;
      /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ebe9f9+0,d8d0ef+50,cec7ec+51,c1bfea+100;Purple+3D+%231 */
 background: rgb(235,233,249); /* Old browsers */
 background: -moz-linear-gradient(top,  rgba(235,233,249,1) 0%, rgba(216,208,239,1) 50%, rgba(206,199,236,1) 51%, rgba(193,191,234,1) 100%); /* FF3.6-15 */
