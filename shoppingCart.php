@@ -6,12 +6,24 @@ function getProducts()
 {
     $productsToBuy = array_unique($_GET['album']);
     $total = 0;
+    echo "<div id='content2'>";
+    echo "<table border=1>";
+    echo "<tr>";
+    echo "<th> Album Name </th>";
+    echo "<th> Price </th>";
+    echo "</tr>";
+    
+    
     foreach($productsToBuy as $product){
-            echo $product . "   "  . "$". getPrice($product)[0]['price']; 
+            echo "<tr>";
+            echo "<td> " . $product . "</td>"  . "<td> $". getPrice($product)[0]['price'] . "</td>"; 
+            echo "</tr>";
             $total+=getPrice($product)[0]['price'];
-            echo "<br />";
+            //echo "<br />";
             
         }
+        echo "</table>";
+        echo "</div>";
     echo "Total $". $total ;
 }
 function getPrice($album)
@@ -40,8 +52,13 @@ function getPrice($album)
     </head>
     <body>
         <h1>Thank you for shopping at CD STORE</h1>
+        
         <br />
-        You ordered the following products: <br />
+        <div id = "thankyou" >
+        You ordered the following products:
+        </div>
+        <br />
+        
         <?=getProducts()?>
 
     </body>
