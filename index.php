@@ -69,7 +69,10 @@ include('functions.php');
         </div>      
         </form>
         
-        <div id="content">
+       
+      
+      <form action="shoppingCart.php">
+          <div id="content">
       <table border=1>
           
           <tr>
@@ -79,14 +82,14 @@ include('functions.php');
               <th> Album Price </th>
           </tr>
           <?php
-          
+           //$_GET['album'] = $array();
            $productList = getProductList();
             foreach($productList as $product)
             {
                 echo "<tr>";
                 echo "<td> '" . $product['artistName'] . "' </td>";
                 echo "<td> '" . $product['albulmName'] . "' </td>";
-                echo "<td> <input type='checkbox' name= '" . "album". "' value= '" . $product['title']  . "' id= '". "frame" . "'>" . "<a target='productInfoiFrame' href='getProductInfo.php?Id=" . $product['title'] . "'>" . $product['title'] . "</a>" 
+                echo "<td> <input type='checkbox' name= '" . "album[]". "' value= '" . $product['albulmName']  . "' id= '". "frame" . "'>" . "<a target='productInfoiFrame' href='getProductInfo.php?Id=" . $product['title'] . "'>" . $product['title'] . "</a>" 
                 . "</td> ";
                 echo "<td> $" . $product['price'] . " </td>";
                 echo "</tr>";
@@ -95,13 +98,10 @@ include('functions.php');
           ?>
           
       </table>
-      
-      <form action="shoppingCart.php">
           <input type="submit" value="BUY NOW" name="buy">
       </form>
-      
       <div id = "iframe">
-          <table border=1>
+          <table border = 1>
               <tr>
                   <th>Song Description</th>
               </tr>
@@ -114,7 +114,14 @@ include('functions.php');
             </table>
       </div>
         
-        
+        <iframe name="productInfoiFrame" width="250" height="100" 
+          src="getProductInfo.php" frameborder="0" style='float: right'>
+        </iframe>
+              </td>
+              </tr>
+          </table>
+        </div>
+>>>>>>> a45e480d85919835551e7bf55b5ff6deb274f3d9
 
     </body>
 </html>
