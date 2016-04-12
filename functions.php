@@ -100,10 +100,11 @@ global $dbConnection;
             FROM songs NATURAL JOIN
             artist NATURAL JOIN
             albulm WHERE 1";
+    $namedParameters = array();
             
     if (isset($_GET['searchForm'])) { //checks whether the search form was submitted
         
-        $namedParameters = array();
+        
         
         if (!empty($_GET['artist'])) {
             
@@ -141,11 +142,13 @@ global $dbConnection;
         }
         
 
-        if (!isset($_GET['orderBy'])) {
+        if (!empty($_GET['orderBy'])) {
             
             $sql .= " ORDER BY " . $_GET['orderBy'] ;
             
         }
+        
+        echo $sql;
 
     }    
           
