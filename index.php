@@ -18,7 +18,7 @@ include('functions.php');
             
           Artist:
           <select name="artist" class="artistDrop">
-              <option value="all"> All </option>
+              <option value=""> All </option>
               <?php
                  $artists = getArtists();
                  foreach ($artists as $artist) {
@@ -31,7 +31,7 @@ include('functions.php');
           
           Genre:
           <select name="genre" class="genreDrop">
-              <option value="all"> All </option>
+              <option value=""> All </option>
               <?php
                  $genres = getGenre();
                  foreach ($genres as $genre) {
@@ -44,7 +44,7 @@ include('functions.php');
           
           Album:
           <select name="album" class="albumDrop">
-              <option value="all"> All </option>
+              <option value=""> All </option>
               <?php
                  $albums = getAlbum();
                  foreach ($albums as $album) {
