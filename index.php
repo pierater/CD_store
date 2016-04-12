@@ -99,8 +99,21 @@ include('functions.php');
       <form action="shoppingCart.php">
           <input type="submit" value="BUY NOW" name="buy">
       </form>
-        <iframe name="productInfoiFrame" width="250" height="315" 
-          src="getProductInfo.php" frameborder="0" style='float: right'></iframe>
+      
+      <div id = "iframe">
+          <table border=1>
+              <tr>
+                  <th>Song Description</th>
+              </tr>
+              <tr>
+              <td>
+            <iframe name="productInfoiFrame" width="250" height="315" 
+            src="getProductInfo.php" frameborder="0" style='float: right'></iframe>
+            </td>
+            </tr>
+            </table>
+      </div>
+        
         
 
     </body>
