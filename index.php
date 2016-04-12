@@ -12,10 +12,12 @@ include('functions.php');
     </head>
     <body>
         <h1>CD STORE</h1>
-        <h3>With prices so low its NUTS!</h3>
+        <br />
+        <h3 id ="slogan">With prices so low its NUTS!</h3>
+        <br />
         
         <form class="filterForm">
-            
+         <div id= "orderbyBar">  
           Artist:
           <select name="artist" class="artistDrop">
               <option value=""> All </option>
@@ -64,10 +66,10 @@ include('functions.php');
           <input type="radio" name="orderBy" value="title"> Title
           
           <input type="submit" value="Search Products" name="searchForm">
-            
+        </div>      
         </form>
         
-        <div class='table'>
+        <div id="content">
       <table border=1>
           
           <tr>
@@ -93,6 +95,7 @@ include('functions.php');
           ?>
           
       </table>
+      </ div>
         <iframe name="productInfoiFrame" width="250" height="315" 
           src="getProductInfo.php" frameborder="0" style='float: right'></iframe>
         
